@@ -43,5 +43,5 @@ A modern, feature-rich typing test application built with React. Test your typin
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/typeracer-pro.git
+git clone https://github.com/HarishTR14/wpmReact.git
 cd typeracer-pro
