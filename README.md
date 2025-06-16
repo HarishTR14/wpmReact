@@ -1,4 +1,4 @@
-# wpmReact 🎯
+# WPM-Site 🎯
 
 A modern, feature-rich typing test application built with React. Test your typing speed and accuracy with multiple game modes, difficulty levels, and real-time statistics.
 
