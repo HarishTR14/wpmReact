@@ -1,0 +1,429 @@
+.typing-test {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  background: #1a1a1a;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #00ff88;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.control-group label {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+select,
+button,
+input {
+  padding: 8px 12px;
+  border: 2px solid #333;
+  background: #2a2a2a;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+select:hover,
+button:hover,
+input:hover {
+  border-color: #00ff88;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00ff88;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.race-container {
+  margin-bottom: 30px;
+}
+
+.race-track {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.race-settings {
+  background: #333;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.race-settings h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.race-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ai-wpm-input {
+  width: 80px;
+}
+
+.racer {
+  margin-bottom: 15px;
+}
+
+.racer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.racer-name {
+  font-weight: bold;
+}
+
+.racer-wpm {
+  color: #ccc;
+}
+
+.user-racer .racer-name {
+  color: #00ff88;
+}
+
+.user-racer .racer-wpm {
+  color: #00ff88;
+}
+
+.progress-bar {
+  height: 12px;
+  background: #444;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+.user-progress {
+  background: linear-gradient(90deg, #00ff88, #00cc66);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.opponent-progress {
+  background: linear-gradient(90deg, #ff6b6b, #ff5252);
+}
+
+.game-area {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.text-display {
+  font-size: 1.5rem;
+  line-height: 2;
+  margin-bottom: 20px;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 2px solid #333;
+}
+
+.word {
+  margin-right: 4px;
+}
+
+.char {
+  position: relative;
+  transition: all 0.1s ease;
+}
+
+.char.correct {
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.char.error {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.2);
+}
+
+.char.current {
+  background: #00ff88;
+  color: #1a1a1a;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.input-area {
+  width: 100%;
+  height: 100px;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1rem;
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  color: #fff;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-area:focus {
+  border-color: #00ff88;
+}
+
+.input-area::placeholder {
+  color: #666;
+}
+
+.results {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  border: 2px solid #00ff88;
+}
+
+.results h2 {
+  color: #00ff88;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.result-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.result-stat {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.big-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00ff88;
+  text-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+}
+
+.race-results {
+  margin-top: 30px;
+}
+
+.race-results h3 {
+  color: #00ff88;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.final-standings {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.standing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 8px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: all 0.2s;
+}
+
+.standing:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-standing {
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+.position {
+  font-weight: bold;
+  color: #00ff88;
+  font-size: 1.2rem;
+  min-width: 40px;
+}
+
+.name {
+  flex: 1;
+  text-align: left;
+  margin-left: 15px;
+}
+
+.final-wpm {
+  font-weight: bold;
+  color: #ccc;
+}
+
+.user-standing .name {
+  color: #00ff88;
+}
+
+.user-standing .final-wpm {
+  color: #00ff88;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .typing-test {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .controls {
+    gap: 15px;
+  }
+
+  .race-controls {
+    gap: 15px;
+  }
+
+  .stats-bar {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .result-stats {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .text-display {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .big-number {
+    font-size: 2.5rem;
+  }
+
+  .standing {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .race-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stats-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .result-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-display {
+    font-size: 1.1rem;
+  }
+}
+
+* {
+  background-color: #1a1a1a;
+}
