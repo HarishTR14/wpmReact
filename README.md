@@ -1,4 +1,4 @@
-# TypeRacer Pro 🎯
+# wpmReact 🎯
 
 A modern, feature-rich typing test application built with React. Test your typing speed and accuracy with multiple game modes, difficulty levels, and real-time statistics.
 
@@ -44,4 +44,4 @@ A modern, feature-rich typing test application built with React. Test your typin
 1. Clone the repository
 ```bash
 git clone https://github.com/HarishTR14/wpmReact.git
-cd typeracer-pro
+
